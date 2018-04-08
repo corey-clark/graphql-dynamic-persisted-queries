@@ -3,8 +3,8 @@ import { Query } from 'react-apollo'
 import { extendGreeting } from '../queries'
 
 const showExtendedGreeting = ({ error, loading, data: { greeting } = {} }) => {
-  if (loading) return "Loading...";
-  if (error) return `Error! ${error.message}`;
+  if (loading) return "Loading..."
+  if (error) return `Error! ${error.message}`
 
   return (
     <p>

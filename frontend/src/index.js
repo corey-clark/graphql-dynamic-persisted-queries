@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Link, BrowserRouter as Router, Route } from 'react-router-dom'
+import React from 'react'
+import { render } from 'react-dom'
+import { Link, BrowserRouter, Route } from 'react-router-dom'
 import { ApolloProvider } from 'react-apollo'
-import ApolloClient from 'apollo-client';
-import { createPersistedQueryLink } from 'apollo-link-persisted-queries';
-import { createHttpLink } from 'apollo-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import ApolloClient from 'apollo-client'
+import { createPersistedQueryLink } from 'apollo-link-persisted-queries'
+import { createHttpLink } from 'apollo-link-http'
+import { InMemoryCache } from 'apollo-cache-inmemory'
 import Home from './components/home'
 import PageOne from './components/pageOne'
 import PageTwo from './components/pageTwo'
@@ -17,23 +17,23 @@ const client = new ApolloClient({
   )
 })
 
-ReactDOM.render(
+render(
   <ApolloProvider client={client}>
-    <Router>
-      <div className="App">
+    <BrowserRouter>
+      <div>
         <ul>
-          <li><Link to="/home">Home</Link></li>
-          <li><Link to="/pageone">Page One</Link></li>
-          <li><Link to="/pagetwo">Page Two</Link></li>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/pageone'>Page One</Link></li>
+          <li><Link to='/pagetwo'>Page Two</Link></li>
         </ul>
 
         <hr />
 
-        <Route path="/home" component={Home}/>
-        <Route path="/pageone" component={PageOne}/>
-        <Route path="/pagetwo" component={PageTwo}/>
+        <Route path='/' exact component={Home}/>
+        <Route path='/pageone' component={PageOne}/>
+        <Route path='/pagetwo' component={PageTwo}/>
       </div>
-    </Router>
+    </BrowserRouter>
   </ApolloProvider>,
   document.getElementById('root')
-);
+)
