@@ -16,6 +16,7 @@ app.use(
   '/graphql', 
   cors(),
   bodyParser.json(),
+  persistedQueries,
   graphqlExpress({ schema })
 )
 

@@ -15,7 +15,7 @@ const showExtendedGreeting = ({ error, loading, data: { greeting } = {} }) => {
 }
 
 const PageTwo = () =>
-  <Query query={extendGreeting} variables={{ name: 'Kyire' }}>
+  <Query query={extendGreeting} variables={{ name: 'Kyrie' }}>
     {showExtendedGreeting}
   </Query>
 

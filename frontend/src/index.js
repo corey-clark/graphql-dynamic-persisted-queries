@@ -29,9 +29,9 @@ render(
 
         <hr />
 
-        <Route path='/' exact component={Home}/>
-        <Route path='/pageone' component={PageOne}/>
-        <Route path='/pagetwo' component={PageTwo}/>
+        <Route path='/' exact component={Home} />
+        <Route path='/pageone' component={PageOne} />
+        <Route path='/pagetwo' component={PageTwo} />
       </div>
     </BrowserRouter>
   </ApolloProvider>,
