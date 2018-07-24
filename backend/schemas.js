@@ -1,4 +1,6 @@
-const Greeting = `
+const { gql } = require('apollo-server-express')
+
+const Greeting = gql`
   type Greeting {
     name: String
     age: Int
@@ -7,7 +9,7 @@ const Greeting = `
   }
 `
 
-const Query = `
+const Query = gql`
   type Query {
     greeting(name: String): Greeting
   }
