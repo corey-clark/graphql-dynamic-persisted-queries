@@ -1,11 +1,5 @@
-# GraphQL Dynamic Persisted Queries
+# GraphQL alternate routes example
 
-A simple GraphQL server and React client for demonstrating the idea of using dynamic persisted queries.
-
-/frontend
-  - npm install
-  - npm run start
-
-/backend
+cd backend
  - npm install
  - node server.js
